@@ -51,4 +51,6 @@ def interactive_chart(df: pd.DataFrame, title: str = "Gráfico Interactivo", x: 
     fig.add_trace(go.Scatter(x=df[x], y=df[y], mode='lines+markers', name=y))
     fig.update_layout(title=title, xaxis_title=x.capitalize(), yaxis_title=y.capitalize())
 
-    return plot(fig, output_type='div')
+    return plot(fig, output_type='div', include_plotlyjs='cdn')
+
+
