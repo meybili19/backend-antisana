@@ -52,7 +52,7 @@ def get_interactive_chart(filename: str):
     filepath = os.path.join("data", filename)
     try:
         df = read_csv_auto(filepath)
-        html_chart = interactive_chart(df, title=f"Gráfico interactivo de {filename}")
+        html_chart = interactive_chart(df, title=f"Gráfico de {filename}")
         return HTMLResponse(content=html_chart)
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
